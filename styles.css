@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('bake2.jpg'); /* Replace with your image file path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed on scroll */
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 0;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    color: #ff6347;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  nav ul li button:hover {
+    background-color: #e55337;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .content {
+    display: none;
+  }
+  
+  .content.active {
+    display: block;
+  }
+  
+  .menu-item {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .total {
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .payment-button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .payment-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hidden {
+    display: none;
+  }

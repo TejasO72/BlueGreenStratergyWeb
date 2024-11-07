@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delicious Bakery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Delicious Bakery</h1>
+    <p>Your favorite bakery in India!</p>
+    <nav>
+      <ul>
+        <li><button onclick="navigateTo('home')">Home</button></li>
+        <li><button onclick="navigateTo('order')">Order Menu</button></li>
+        <li><button onclick="navigateTo('contact')">Contact Us</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="content active">
+      <h2>About Us</h2>
+      <p>At Delicious Bakery, we offer a variety of freshly baked goods, from breads to cakes and pastries. Made with love and high-quality ingredients, we ensure the best taste in every bite!</p>
+    </section>
+
+    <!-- Order Menu Section -->
+    <section id="order" class="content">
+      <h2>Order Menu</h2>
+      <div class="menu-item" data-price="150">
+        <span>Chocolate Cake - ₹150</span>
+        <input type="number" value="0" min="0" class="quantity" data-item="Chocolate Cake">
+      </div>
+      <div class="menu-item" data-price="50">
+        <span>Croissant - ₹50</span>
+        <input type="number" value="0" min="0" class="quantity" data-item="Croissant">
+      </div>
+      <div class="menu-item" data-price="100">
+        <span>Banana Bread - ₹100</span>
+        <input type="number" value="0" min="0" class="quantity" data-item="Banana Bread">
+      </div>
+      <div class="menu-item" data-price="20">
+        <span>Bun - ₹20</span>
+        <input type="number" value="0" min="0" class="quantity" data-item="Bun">
+      </div>
+      <div class="menu-item" data-price="120">
+        <span>Brownie - ₹120</span>
+        <input type="number" value="0" min="0" class="quantity" data-item="Brownie">
+      </div>
+      
+      
+      <div class="total">
+        <h3>Total: ₹<span id="total">0</span></h3>
+      </div>
+
+      <button id="placeOrder">Place Order</button>
+
+      <!-- Payment Section -->
+      <div id="payment" class="hidden">
+        <h3>Choose Payment Method</h3>
+        <button class="payment-button" onclick="payNow('UPI')">Pay with UPI</button>
+        <button class="payment-button" onclick="payNow('Card')">Pay with Card</button>
+        <button class="payment-button" onclick="payNow('Cash on Delivery')">Cash on Delivery</button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content">
+      <h2>Contact Us</h2>
+      <p>Email: deliciousbakery@example.com</p>
+      <p>Phone: +91-9876543210</p>
+      <p>Address: 123 Bakery Street, Mumbai, India</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
