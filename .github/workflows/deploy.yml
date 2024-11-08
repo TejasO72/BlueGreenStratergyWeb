@@ -20,6 +20,7 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.EC2_SSH_KEY }}  # Private SSH key stored in GitHub secrets
 
+
       # SSH into EC2 and pull the latest code
       - name: Deploy to EC2
         run: |
