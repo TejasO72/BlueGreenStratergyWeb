@@ -24,6 +24,8 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh -o StrictHostKeyChecking=no root@65.1.94.29 << 'EOF'
+            # Set the directory as safe for git
+            git config --global --add safe.directory /var/www/html
             cd /var/www/html  # Navigate to the web directory
             git pull git@github.com:TejasO72/BlueGreenStratergyWeb.git main
             sudo chown -R www-data:www-data /var/www/html  # Set proper ownership for the web files
