@@ -23,7 +23,7 @@ jobs:
       # SSH into EC2 and pull the latest code
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@your-ec2-public-ip << 'EOF'
+          ssh -o StrictHostKeyChecking=no ec2-user@65.1.94.29 << 'EOF'
             cd /var/www/html  # Navigate to the web directory
             git pull origin main  # Pull the latest code from GitHub (or 'master' if using that branch)
             sudo chown -R www-data:www-data /var/www/html  # Set proper ownership for the web files
