@@ -28,12 +28,19 @@ jobs:
             git config --global --add safe.directory /var/www/html
 
             # Navigate to the web directory
-            cd /var/www/html  
+            cd /var/www/html
+
+            # Fix permissions on .git directory and all files
+            sudo chown -R www-data:www-data /var/www/html
+            sudo chmod -R 755 /var/www/html
+
+            # Ensure the .git directory has the correct permissions as well
+            sudo chmod -R g+w /var/www/html/.git
 
             # Pull the latest code from GitHub (use the SSH URL and main branch)
             git pull git@github.com:TejasO72/BlueGreenStratergyWeb.git main
 
-            # Set proper ownership for the web files
+            # Set proper ownership for the web files again
             sudo chown -R www-data:www-data /var/www/html
 
             # Set appropriate permissions for the web files
