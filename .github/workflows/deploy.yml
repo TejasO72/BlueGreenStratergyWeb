@@ -25,7 +25,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no root@65.1.94.29 << 'EOF'
             cd /var/www/html  # Navigate to the web directory
-            git pull origin main  # Pull the latest code from GitHub (or 'master' if using that branch)
+            git pull git@github.com:TejasO72/BlueGreenStratergyWeb.git main
             sudo chown -R www-data:www-data /var/www/html  # Set proper ownership for the web files
             sudo chmod -R 755 /var/www/html  # Set appropriate permissions for the web files
           EOF
