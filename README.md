@@ -1,4 +1,4 @@
-# 🚀 Cloud-Native Monitoring System
+# 🚀 Blue-Green_Deployment_Stratergy
 ## 📋 Overview
 
 A robust, scalable monitoring solution deployed on AWS, leveraging Kubernetes for orchestration and autoscaling capabilities. The system utilizes Prometheus for metrics collection and Grafana for visualization, all containerized using Docker.
